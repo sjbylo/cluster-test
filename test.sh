@@ -12,11 +12,12 @@ myout() {
 }
 
 # Start the session
-OUT=`curl -sb .cookie $MY_ROUTE`
+OUT=`curl -sc .cookie $MY_ROUTE`
 myout "$OUT"
+
 sleep $MY_WAIT
 
-cnt=0
+cnt=1
 while [ $cnt -lt $MAX ]
 do
 	OUT=`curl -sb .cookie $MY_ROUTE`
