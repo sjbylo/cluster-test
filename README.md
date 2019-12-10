@@ -4,10 +4,12 @@ Code for testing a JBoss EAP Cluster.  The test app called "cluster_test.war" cr
 
 # Launch the test app
 
+```
 git clone https://github.com/sjbylo/cluster-test.git 
 cd cluster-test 
 oc new-build openshift/jboss-eap72-openshift:1.0 --name eap-cluster --binary
 oc start-build eap-cluster --from-dir=. --follow
+```
 
 # Create the app 
 
@@ -58,12 +60,6 @@ metadata:
         service.alpha.kubernetes.io/tolerate-unready-endpoints: "true"
         description: "The JGroups ping port for clustering."
 END
-```
-
-```
-#JGROUPS_PING_PROTOCOL=openshift.DNS_PING
-#OPENSHIFT_DNS_PING_SERVICE_NAME=eap-cluster-ping
-#OPENSHIFT_DNS_PING_SERVICE_PORT=8888
 ```
 
 ```
