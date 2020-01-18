@@ -1,6 +1,6 @@
 # EAP Cluster on OpenShift
 
-Code for testing a JBoss EAP Cluster.  The test app called "cluster_test.war" creates a user session and stores the hit count into the session memory.  The app displays the hit count and the session ID. 
+Code for testing a JBoss EAP Cluster.  The test app called "cluster_test.war" creates a user session and stores the hit count into the session memory.  The app displays the hit count and the session ID.    Note, source code for a similar test app is under the "other" folder.
 
 # Launch the test app
 
